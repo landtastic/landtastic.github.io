@@ -267,7 +267,7 @@ function loadRSS(rssfeedurl) {
 
 	$.ajax({
 		type: 'GET',
-		url: 'http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=100&output=json&q='+rssfeed,
+		url: 'https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=100&output=json&q='+rssfeed,
 		crossDomain: true,
 		dataType: 'jsonp',
 		success: parseXml
@@ -323,7 +323,7 @@ $(function() {
 			var apiKey = 'AIzaSyDlcHPnr5gJr1_pBSvVSRtFudfpIUppfjM';
 			var query = extractLast( request.term );
 			$.ajax({
-				url: "http://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&cp=1&q="+query+"&key="+apiKey+"&format=5&alt=json&callback=?",
+				url: "https://suggestqueries.google.com/complete/search?hl=en&ds=yt&client=youtube&hjson=t&cp=1&q="+query+"&key="+apiKey+"&format=5&alt=json&callback=?",
 				dataType: 'jsonp',
 				success: function(data, textStatus, request) { 
 				   response( $.map( data[1], function(item) {
